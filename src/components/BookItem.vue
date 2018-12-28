@@ -2,7 +2,7 @@
   <li>
     {{book.title}} : {{book.author}}
     <span class="read" v-if="book.finishedReading">-Read</span>
-    <span class="unread" v-else="book.finishedReading">-Unread</span>
+    <span class="unread" v-else="book.finishedReading">-Not Read</span>
   </li>
 </template>
 
