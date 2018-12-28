@@ -1,6 +1,8 @@
 <template>
   <li>
     {{book.title}} : {{book.author}}
+    <span class="read" v-if="book.finishedReading">-Read</span>
+    <span class="unread" v-else="book.finishedReading">-Unread</span>
   </li>
 </template>
 
@@ -16,4 +18,5 @@ li {
   display: block;
   margin: 0 10px;
 }
+.read { color: green} .unread { color: red }
 </style>
