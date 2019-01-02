@@ -38,7 +38,7 @@ export default {
           title: "American Gods", 
           author: "Neil Gaiman", 
           finishedReading: true, 
-          ownership: "borrowed" 
+          ownership: "bought" 
         },
         { 
           title: "Amusing Ourselves to Death", 
