@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{title}}</h1>
-    <ul="exists">
+    <ul class="exists">
       <book-item v-for='book in books' :key='book.id' :book='book'></book-item>
     </ul>
     <hr>
@@ -9,7 +9,7 @@
     <select v-model="holding"></select>
       <option v-for="filter in filters">{{ filter }}</option>
     </select>
-      <ul>
+    <ul>
       <book-item v-for='book in filteredBooks' :key='book.id' :book='book'></book-item>
     </ul>
     <br><hr>
@@ -29,9 +29,23 @@ export default {
       title: "All Books",
       states: ["Want to Read", "Read", "Reading"],
       books: [
-        { title: "Self-Reliance", author: "Ralph Waldo Emerson", finishedReading: true, ownership: "borrowed" },
-        { title: "American Gods", author: "Neil Gaiman", finishedReading: true, ownership: "borrowed" },
-        { title: "Amusing Ourselves to Death", author: "Neil Postman", finishedReading: false, ownership: "borrowed" }
+        { title: "Self-Reliance", 
+          author: "Ralph Waldo Emerson", 
+          finishedReading: true, 
+          ownership: "borrowed" 
+        },
+        { 
+          title: "American Gods", 
+          author: "Neil Gaiman", 
+          finishedReading: true, 
+          ownership: "borrowed" 
+        },
+        { 
+          title: "Amusing Ourselves to Death", 
+          author: "Neil Postman", 
+          finishedReading: false, 
+          ownership: "borrowed" 
+        }
       ],
       filters: ["bought", "borrowed"],
       holding: "bought"
